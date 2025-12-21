@@ -1,0 +1,18 @@
+<table border="1" [cellPadding]="8">
+  <tr>
+    <td>title</td>
+    <td>author</td>
+    <td>genre</td>
+    <td>year</td>
+    <td>actions</td>
+  </tr>
+  @for (book of books; track $index) {
+  <tr>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.genre }}</td>
+    <td>{{ book.publishedYear || 'N/A' }}</td>
+    <td><button>Delete</button></td>
+  </tr>
+  }
+</table>
